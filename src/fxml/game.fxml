@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="450" minWidth="600" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <children>
+      <ImageView fx:id="background" fitHeight="450.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane fx:id="gameItemPane" prefHeight="450.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="64.0" layoutY="27.0" text="STATISTICS" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="clears" layoutX="245.0" layoutY="27.0" text="LINES  -  000" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="428.0" layoutY="40.0" text="TOP" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="top" layoutX="428.0" layoutY="65.0" text="000000" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="428.0" layoutY="95.0" text="SCORE" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="score" layoutX="428.0" layoutY="120.0" text="000000" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="426.0" layoutY="211.0" text="NEXT" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="420.0" layoutY="305.0" text="LEVEL" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="level" layoutX="474.0" layoutY="327.0" text="0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Pane fx:id="stats" layoutX="45.0" layoutY="71.0" prefHeight="308.0" prefWidth="170.0">
+               <children>
+                  <Label layoutX="115.0" layoutY="276.0" text="000" textFill="RED">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="141.0" text="000" textFill="RED">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="96.0" text="000" textFill="RED">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="186.0" text="000" textFill="RED">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="6.0" text="000" textFill="RED">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="231.0" text="000" textFill="RED">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="115.0" layoutY="51.0" text="000" textFill="RED">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane fx:id="menuItemPane" prefHeight="450.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="130.0" layoutY="10.0" text="LEVEL" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="440.0" layoutY="298.0" text="OPTIONS" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <VBox alignment="CENTER" layoutX="419.0" layoutY="27.0" prefHeight="140.0" prefWidth="142.0">
+               <children>
+                  <Label text="MUSIC" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="song" alignment="CENTER" prefWidth="142.0" text="No Music" textFill="WHITE" textOverrun="CLIP">
+                     <font>
+                        <Font name="Arial Black" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="11.0" />
+                     </padding>
+                  </Label>
+                  <HBox fx:id="musicPlayer" alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView disable="true" fitHeight="34.0" fitWidth="34.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="34.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <GridPane fx:id="levels" alignment="CENTER" layoutX="58.0" layoutY="44.0">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="36.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="36.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="36.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="36.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="36.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="36.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="35.5" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="35.5" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="0" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="1" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="2" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="3" textFill="WHITE" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="4" textFill="WHITE" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label disable="true" text="-" textFill="WHITE" GridPane.columnIndex="5">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="5" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="6" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="7" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="8" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="9" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+                  <Label text="+" textFill="WHITE" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Arial Black" size="32.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <Rectangle fx:id="selector" arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="37.0" layoutX="58.0" layoutY="44.0" stroke="RED" strokeType="INSIDE" strokeWidth="2.0" width="37.0" />
+            <VBox fx:id="scores" alignment="CENTER" layoutX="41.0" layoutY="259.0" prefHeight="122.0" prefWidth="358.0">
+               <children>
+                  <Label text="TOP 6 SCORES" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefWidth="179.0">
+                           <children>
+                              <Label text="100000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefWidth="179.0">
+                           <children>
+                              <Label text="75000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefWidth="179.0">
+                           <children>
+                              <Label text="50000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefWidth="179.0">
+                           <children>
+                              <Label text="25000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefWidth="179.0">
+                           <children>
+                              <Label text="10000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefWidth="179.0">
+                           <children>
+                              <Label text="5000" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+   </children>
+</Pane>
